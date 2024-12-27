@@ -11,7 +11,6 @@ const ASSETS_TO_CACHE = [
   "/assets/pages/abstract.html",
   "/assets/pages/landscape.html",
   "/assets/pages/street.html",
-  "/portal.html",
 ];
 
 // Install event
