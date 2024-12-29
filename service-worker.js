@@ -6,11 +6,12 @@ const ASSETS_TO_CACHE = [
   "/assets/images/icon-192x192.png",
   "/assets/images/icon-512x512.png",
   "/index.html",
-  "/assets/pages/about.html",
-  "/assets/pages/contact.html",
-  "/assets/pages/abstract.html",
-  "/assets/pages/landscape.html",
-  "/assets/pages/street.html",
+  "/assets/images/portfolio.png",
+  "/assets/images/discord.png",
+  "/assets/images/instagram.png",
+  "/assets/images/vero.png",
+  "/assets/images/github.png",
+  "/assets/images/venmo.png",
 ];
 
 // Install event
