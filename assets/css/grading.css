@@ -26,29 +26,25 @@ header {
 }
 
 #home-title {
-  background: linear-gradient(45deg, #a8dadc, #f1faee); /* Soft and calming */
-  background-clip: text; /* Standard property */
+  background: linear-gradient(45deg, #a8dadc, #f1faee);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Makes gradient visible on text */
-  font-family: "Unica One", sans-serif;
-  font-size: 3rem; /* Default size for larger screens */
-  color: #222; /* Dark text for contrast */
-  text-align: center; /* Center align the title */
-  text-transform: uppercase; /* Make it bold and impactful */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-  letter-spacing: 1px; /* Add some spacing for elegance */
-  margin: 20px 0; /* Add spacing around the title */
-  white-space: nowrap; /* Prevent stacking */
+  -webkit-text-fill-color: transparent;
+  font-family: 'Unica One', sans-serif;
+  font-size: 3rem;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  margin: 20px 0;
+  white-space: nowrap;
 }
 
 .header-background {
   width: 100%;
   height: 100%;
-  background-image: repeating-radial-gradient(
-    #0c0a0a 80%,
-    #2f312f 90%,
-    #3f4549 90%
-  );
+  background-image: repeating-radial-gradient(#0c0a0a 80%, #2f312f 90%, #3f4549 90%);
   background-size: 65px 65px;
   display: flex;
   flex-direction: column;
@@ -57,7 +53,30 @@ header {
   text-align: center;
 }
 
-/* Card Container (Desktop) */
+/*
+.header-background {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  background-image: repeating-linear-gradient(
+      to right,
+      rgba(30, 30, 30, 0.8) 0px,
+      rgba(15, 15, 15, 0.9) 10px,
+      rgba(30, 30, 30, 0.8) 20px
+    ),
+    radial-gradient(circle at 20% 20%, rgba(50, 50, 50, 0.15), transparent),
+    radial-gradient(circle at 80% 70%, rgba(80, 80, 80, 0.1), transparent);
+  background-size: 100px 100px, 300px 300px, 400px 400px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 60px rgba(255, 255, 255, 0.05);
+  filter: contrast(1.2) brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+  */
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -69,7 +88,6 @@ header {
   height: 100%;
 }
 
-/* Cards */
 .card {
   width: 190px;
   height: 254px;
@@ -120,9 +138,8 @@ header {
   transform: translateY(-30px);
 }
 
-/* Text Reveal */
 .card::before {
-  content: attr(data-text); /* Pull text dynamically */
+  content: attr(data-text);
   letter-spacing: 0.2em;
   position: absolute;
   bottom: 8px;
@@ -130,12 +147,12 @@ header {
   color: rgb(255, 255, 255);
   font-size: 0.8em;
   font-weight: 700;
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .card:hover::before {
-  opacity: 1; /* Reveal text on hover */
+  opacity: 1;
 }
 
 footer {
@@ -192,27 +209,27 @@ footer {
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px; /* Space between rows and columns */
-    width: 100%; /* Full width of the body */
-    max-width: 400px; /* Restrict container width */
-    padding: 5px; /* Padding around the container */
-    margin: auto; /* Center the container both vertically and horizontally */
-    box-sizing: border-box; /* Include padding in width calculations */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    margin: auto;
+    box-sizing: border-box;
   }
 
   .card {
-    width: 150px; /* Portrait layout width */
-    height: 200px; /* Portrait layout height */
+    width: 150px;
+    height: 200px;
     background-color: #424242;
-    border-radius: 10px; /* Smooth corners */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     overflow: hidden;
-    position: relative; /* Needed for pseudo-elements */
+    position: relative;
   }
 
   .card img {
@@ -225,23 +242,23 @@ footer {
   }
 
   .card::before {
-    content: attr(data-text); /* Display text dynamically */
-    font-size: 1rem; /* Adjust font size */
-    font-weight: bold; /* Make text bold */
-    color: #ffffff; /* Ensure text is visible */
-    text-transform: uppercase; /* Uppercase styling */
-    position: absolute; /* Position text relative to card */
-    bottom: 5%; /* Lower the text further */
-    left: 50%; /* Center text horizontally */
-    transform: translateX(-50%); /* Adjust alignment */
-    z-index: 2; /* Ensure text is above image */
-    text-align: center; /* Align text within card */
-    white-space: nowrap; /* Prevent wrapping */
-    opacity: 1; /* Always visible on mobile */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
-    background: rgba(0, 0, 0, 0.7); /* Add semi-transparent background */
-    padding: 5px 10px; /* Add padding for the background */
-    border-radius: 10px; /* Smooth corners for background */
+    content: attr(data-text);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 10px;
   }
 
   .card:hover::before {
